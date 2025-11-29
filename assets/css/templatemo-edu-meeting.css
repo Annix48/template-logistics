@@ -1273,9 +1273,8 @@ section.our-facts .video img {
 }
 
 .cta-box {
-    margin-left: 120px;
-
-background: linear-gradient(to left, #540101, #0f0c19);
+  margin-left: 120px;
+  background: linear-gradient(to left, #540101, #0f0c19);
   backdrop-filter: blur(4px);
   border-radius: 20px;
   padding: 50px 40px;
