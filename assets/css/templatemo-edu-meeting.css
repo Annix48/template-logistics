@@ -1260,7 +1260,6 @@ section.our-facts h2 {
 section.our-facts .video {
   text-align: center;
   margin-left: 70px;
-  /* background-image: url(../images/video-item-bg.jpg); */
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -1470,7 +1469,7 @@ upcoming meetings page
 */
 
 section.meetings-page {
-  background-image: url(../images/meetings-bg.jpg);
+  background-color: #3a3b3c;
   background-position: center center;
   background-attachment: fixed;
   background-repeat: no-repeat;
