@@ -1674,6 +1674,65 @@ section.meetings-page .pagination ul li a:hover {
 	}
 }
 
+
+/* 
+---------------------------------------------
+Page Offers
+--------------------------------------------- 
+*/
+.contact-info {
+  text-align:center;
+  margin-top:40px; 
+  color: rgb(255, 255, 255);
+
+}
+.contact-info p {
+  color: #ffffff;
+  margin-top:40px; 
+}
+
+.contact-info .btn-wycena {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 18px 50px;
+  background: linear-gradient(135deg, #f5c842, #e0a800);
+  color: #1a1a1a;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.contact-info .btn-wycena:hover {
+  background: linear-gradient(135deg, #e0a800, #f5c842);
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(245, 200, 66, 0.4);
+}
+
+
+.wycena-form {
+  max-width: 500px;
+  margin: 20px auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.wycena-form input,
+.wycena-form textarea {
+  padding: 14px 20px;
+  border-radius: 10px;
+  border: none;
+  font-size: 15px;
+  outline: none;
+  width: 100%;
+}
+
+.wycena-form textarea {
+  height: 120px;
+  resize: none;
+}
 /* 
 ---------------------------------------------
 responsive

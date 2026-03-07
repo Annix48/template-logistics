@@ -204,11 +204,12 @@
             
 
               <div class="down-content">
-                <h4>Wieloletnie doświadczenie w europejskiej spedycji</h4>
+                <h4>Wieloletnie doświadczenie w europejskim transporcie</h4>
                 <p>
-                  Pro Transit to nowoczesna firma spedycyjna, która od lat z powodzeniem obsługuje transporty na terenie całej Europy.
-                  Naszą specjalizacją jest <strong>rynek francuski</strong> — to właśnie tam realizujemy największą część naszych zleceń,
-                  dzięki czemu doskonale znamy lokalne procedury, wymagania oraz specyfikę współpracy z francuskimi kontrahentami.
+                  <strong>Pro Transit</strong> to nowoczesna firma <strong>transportowo-spedycyjna</strong>, która od lat z powodzeniem obsługuje transporty na terenie całej Europy.
+                  Organizujemy zarówno transport, jak i kompleksową obsługę spedycyjną, zapewniając naszym klientom sprawną i bezpieczną realizację każdego zlecenia.
+                  <br><br> 
+            Obsługujemy różne kierunki europejskie, jednak szczególne doświadczenie posiadamy na rynku francuskim. To właśnie tam realizujemy znaczną część transportów, dzięki czemu doskonale znamy lokalne procedury, wymagania oraz specyfikę współpracy z francuskimi kontrahentami.
                   <br><br>
                   Świadczymy usługi transportowe i spedycyjne w pełnym zakresie: od ładunków częściowych i całopojazdowych,
                   przez transport ekspresowy busami, aż po dedykowane rozwiązania dla bardziej wymagających projektów.
@@ -356,13 +357,13 @@
               <div class="row">
                 <div class="col-12">
                   <div class="count-area-content ">
-                    <div class="count-digit">5</div>
+                    <div class="count-digit">2</div>
                     <div class="count-title">LAT NA RYNKU</div>
                   </div>
                 </div>
                 <div class="col-12">
                   <div class="count-area-content">
-                    <div class="count-digit">23</div>
+                    <div class="count-digit">108</div>
                     <div class="count-title">Europejskich firm, które nam zaufały</div>
                   </div>
                 </div>
@@ -372,7 +373,7 @@
               <div class="row">
                 <div class="col-12">
                   <div class="count-area-content new-students">
-                    <div class="count-digit">100456</div>
+                    <div class="count-digit">100321456</div>
                     <div class="count-title">PRZEBYTYCH KILOMETRÓW</div>
                   </div>
                 </div> 
@@ -391,7 +392,7 @@
           
                   <div class="cta-box">
                     <h2>Zapytaj o transport</h2>
-                      <a href="tel:+48123456789" class="cta-phone ">+48 123 456 789</a>
+                      <a href="tel:+48574615215" class="cta-phone ">+48 574 615 215</a>
                   </div>
                 
         </div>
@@ -405,13 +406,14 @@
         <div class="col-lg-9 align-self-center">
           <div class="row">
             <div class="col-lg-12">
-              <form id="contact" action="" method="post">
+              <form id="contact" data-form="contact-form" action="https://api.web3forms.com/submit" method="POST" >
                 <div class="row">
                   <div class="col-lg-12">
                     <h2>Napisz do nas wiadomość</h2>
                   </div>
                   <div class="col-lg-4">
                     <fieldset>
+                      <input type="hidden" name="access_key" value="742cc7ac-281b-4609-9c4a-d06d6c934111">
                       <input name="name" type="text" id="name" placeholder="Imię i Nazwisko" required="">
                     </fieldset>
                   </div>
@@ -437,6 +439,10 @@
                   </div>
                 </div>
               </form>
+
+              <div id="contact-success" style="display:none; color:#f5c842; margin-top:20px; font-size:18px;">
+   Dziękujemy za zapytanie! Nasz zespół przygotuje wycenę i skontaktuje się z Tobą wkrótce.
+</div>
             </div>
           </div>
         </div>
@@ -444,17 +450,17 @@
           <div class="right-info">
             
             <ul>
-              <li> <h6>PROTRANSIT Sp.z.o.o. <br> <br> Nip 123456789 </h6> </li>
+              <li> <h6>PRO TRANSIT Sp.z.o.o. <br> <br> KRS 0001144073 </h6> </li>
               <li>
                 <h6>Telefon</h6>
-                <span>+48 789 657 678</span>
+                <span>+48 574 615 215</span>
               </li>
               <li>
                 <h6>Email</h6>
-                <span>info@logistic.pl</span>
+                <span>a.boiko@protransit.pl</span>
               </li>
               <li>
-                <span>Ul. Broniewskiego 7,<br> 97-300 Piotrkow-Trybunalski</span>
+                <span>Ul. Żelazna 4,<br> 97-300 Piotrkow-Trybunalski</span>
               </li>
               
             </ul>
@@ -463,10 +469,28 @@
       </div>
     </div>
     <div class="footer">
-      <p> © 2025 ProTrans</p>    </div>
+      <p> © 2026 Pro Transit </p>    </div>
   </section>
 
   <!-- Scripts -->
+
+
+  <script>
+  const form = document.getElementById('wycena-form');
+  form.addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const data = new FormData(form);
+    const response = await fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      body: data
+    });
+    const result = await response.json();
+    if (result.success) {
+      form.style.display = 'none';
+      document.getElementById('form-success').style.display = 'block';
+    }
+  });
+</script>
   <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -524,6 +548,8 @@
           checkSection();
         });
     </script>
+
+    
 </body>
 
 </body>
