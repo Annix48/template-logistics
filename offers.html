@@ -203,7 +203,7 @@
   <!-- Scripts -->
   <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
 
     <script src="assets/js/isotope.min.js"></script>
     <script src="assets/js/owl-carousel.js"></script>
@@ -260,7 +260,22 @@
         });
     </script>
 
-    
+     <!-- Cookie Banner -->
+    <div id="cookie-banner" style="display:none;">
+      <p>Ta strona używa plików cookies w celu zapewnienia prawidłowego działania. 
+      <a href="#" id="cookie-accept" class="cookie-btn">Akceptuję</a></p>
+    </div>
+
+    <script>
+      if (!localStorage.getItem('cookieAccepted')) {
+        document.getElementById('cookie-banner').style.display = 'block';
+      }
+      document.getElementById('cookie-accept').addEventListener('click', function(e) {
+        e.preventDefault();
+        localStorage.setItem('cookieAccepted', 'true');
+        document.getElementById('cookie-banner').style.display = 'none';
+      });
+    </script>
 </body>
 
 
